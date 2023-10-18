@@ -1,0 +1,439 @@
+{
+  "version": "34.0.0",
+  "artifacts": {
+    "dev-remix-sst-blog-Site.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "dev-remix-sst-blog-Site.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "dev-remix-sst-blog-Site": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://716340889310/us-east-1",
+      "properties": {
+        "templateFile": "dev-remix-sst-blog-Site.template.json",
+        "tags": {
+          "sst:app": "remix-sst-blog",
+          "sst:stage": "dev"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::716340889310:role/cdk-hnb659fds-deploy-role-716340889310-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::716340889310:role/cdk-hnb659fds-cfn-exec-role-716340889310-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-716340889310-us-east-1/b510866241718e1105e31bc7e54e576a564553e8598a7f4c7fbb0661d55569e8.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "dev-remix-sst-blog-Site.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::716340889310:role/cdk-hnb659fds-lookup-role-716340889310-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "dev-remix-sst-blog-Site.assets"
+      ],
+      "metadata": {
+        "/dev-remix-sst-blog-Site": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "sst:app",
+                "Value": "remix-sst-blog"
+              },
+              {
+                "Key": "sst:stage",
+                "Value": "dev"
+              }
+            ]
+          }
+        ],
+        "/dev-remix-sst-blog-Site/CustomResourceHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomResourceHandlerServiceRole41AEC181"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/CustomResourceHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomResourceHandlerE8FB56BA"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Uploads/Bucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UploadsBucketC4B27CC7"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Uploads/Bucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UploadsBucketPolicy4A686DED"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Uploads/Parameter_bucketName/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UploadsParameterbucketNameF87AC662"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Posts/Table": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "PostsTable906445D4"
+            }
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Posts/Table/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PostsTable906445D4"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Posts/Parameter_tableName/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PostsParametertableNameF9FD13C0"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Api/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiCD79AAA0"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Api/DefaultStage/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiDefaultStage1AAE989B"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLogGroup1717FE17"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Lambda_GET_--posts/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETpostsServiceRoleB93B249D"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Lambda_GET_--posts/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETpostsServiceRoleDefaultPolicyE8451E7B"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Lambda_GET_--posts/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETposts3FC51B2F"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Route_GET_--posts/Integration_GET_--posts/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteGETpostsIntegrationGETpostsDEB9DACB"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Route_GET_--posts/Integration_GET_--posts-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteGETpostsIntegrationGETpostsPermission1E52AE78"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Route_GET_--posts/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteGETposts97BFD29E"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Lambda_POST_--posts/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaPOSTpostsServiceRoleB5B42035"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Lambda_POST_--posts/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaPOSTpostsServiceRoleDefaultPolicyBB84761E"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Lambda_POST_--posts/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaPOSTposts410C3447"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Route_POST_--posts/Integration_POST_--posts/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRoutePOSTpostsIntegrationPOSTposts2F19397A"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Route_POST_--posts/Integration_POST_--posts-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRoutePOSTpostsIntegrationPOSTpostsPermissionFAB209D3"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Route_POST_--posts/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRoutePOSTposts7BB752F8"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Lambda_GET_--posts--{id}/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETpostsidServiceRoleA1E979E7"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Lambda_GET_--posts--{id}/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETpostsidServiceRoleDefaultPolicy68463D57"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Lambda_GET_--posts--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETpostsid7084C714"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Route_GET_--posts--{id}/Integration_GET_--posts--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteGETpostsidIntegrationGETpostsid7F66B9AD"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Route_GET_--posts--{id}/Integration_GET_--posts--{id}-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteGETpostsidIntegrationGETpostsidPermission23FD7ADE"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Route_GET_--posts--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteGETpostsid2E99EDA1"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Lambda_PUT_--posts--{id}/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaPUTpostsidServiceRoleAF34ED49"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Lambda_PUT_--posts--{id}/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaPUTpostsidServiceRoleDefaultPolicy57186717"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Lambda_PUT_--posts--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaPUTpostsidAD145382"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Route_PUT_--posts--{id}/Integration_PUT_--posts--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRoutePUTpostsidIntegrationPUTpostsid47973EFC"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Route_PUT_--posts--{id}/Integration_PUT_--posts--{id}-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRoutePUTpostsidIntegrationPUTpostsidPermission88170958"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Route_PUT_--posts--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRoutePUTpostsidB3E58956"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Lambda_DELETE_--posts--{id}/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaDELETEpostsidServiceRole0DA6DA89"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Lambda_DELETE_--posts--{id}/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaDELETEpostsidServiceRoleDefaultPolicy154A0BBF"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Lambda_DELETE_--posts--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaDELETEpostsid5A4B5D5D"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Route_DELETE_--posts--{id}/Integration_DELETE_--posts--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteDELETEpostsidIntegrationDELETEpostsid0F566199"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Route_DELETE_--posts--{id}/Integration_DELETE_--posts--{id}-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteDELETEpostsidIntegrationDELETEpostsidPermissionD5E3BAFF"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Route_DELETE_--posts--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteDELETEpostsidEB5AC1EA"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Lambda_GET_--test/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETtestServiceRole723A740B"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Lambda_GET_--test/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETtestServiceRoleDefaultPolicy5B0BED19"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Lambda_GET_--test/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETtestACA646F8"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Route_GET_--test/Integration_GET_--test/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteGETtestIntegrationGETtestA8B5ECB6"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Route_GET_--test/Integration_GET_--test-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteGETtestIntegrationGETtestPermissionAE6D5029"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Route_GET_--test/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteGETtestC4D2F96C"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/Api/Parameter_url/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiParameterurl09B86AB9"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/site/ServerFunctionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctionRole1F8F4FAC"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/site/ServerFunctionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctionRoleDefaultPolicy213DB8A5"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/site/ServerFunction/AssetReplacerPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctionAssetReplacerPolicy304BF125"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/site/ServerFunction/AssetReplacer/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctionAssetReplacer9A11D516"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/site/ServerFunction/ServerFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunction6DFA6F1B"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/site/ServerFunction/ServerFunction/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctionLogRetention7123678D"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/site/Parameter_url/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteParameterurl3D1716BC"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/SSTStackOutputApiEndpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiEndpoint"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/SSTStackOutputSSTMetadata": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SSTMetadata"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/dev-remix-sst-blog-Site/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "dev-remix-sst-blog-Site"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
